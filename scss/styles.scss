@@ -1,3 +1,7 @@
+@import "componentes/datos";
+@import "componentes/nesting";
+@import "componentes/mixins";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,19 +9,75 @@
 } 
 
 .body {
-    height: 735px;
+    font-family: 'Lato', sans-serif;
+    display: block;
+    margin: 8px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    font-family: 'Lato', sans-serif;
-    align-items: center;
-    justify-content: center;
-  }
-  .grid-container > div {
-    text-align: center;
-    font-size: 30px;
-    height: 735px;
-  }
+/*.strip:nth-child(1) .column-1 {
+    @include child;
+}
+.strip:nth-child(2) .column-2 {
+    @include child;
+}
+.strip:nth-child(3) .column-3 {
+    @include child;
+}
+.strip:nth-child(4) .column-4 {
+    @include child;
+}
+.strip:nth-child(5) .column-5 {
+    @include child;
+}*/
+
+/*.strip {
+    @include column_strip;
+}*/
+
+.column-1{
+    background-color: $color1;
+    @include column-design;
+    //@include column_strip;
+}
+.column-2{
+    background-color: $color2;
+    @include column-design;
+    //@include column_strip;
+}
+.column-3{
+    background-color: $color3;
+    @include column-design;
+    //@include column_strip;
+}
+.column-4{
+    background-color: $color4;
+    @include column-design;
+    //@include column_strip;
+}
+.column-5{
+    background-color: $color5;
+    @include column-design;
+    //@include column_strip;
+}
+
+.column-1:before {
+    @include before;
+}
+.column-2:before {
+    @include before;
+}
+.column-3:before {
+    @include before;
+}
+.column-4:before {
+    @include before;
+}
+.column-5:before {
+    @include before;
+}
+
+
+
+
+  
 
